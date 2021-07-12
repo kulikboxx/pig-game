@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Pig Game</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="dices-body">
+        <h1 class="dices-title">Pig Game</h1>
+        <div class="dices-wrapper">
+            <div class="players">
+                <div class="player active">
+                    <h2 class="player-name">Player 1</h2>
+                    <div class="current">
+                        <span class="current-name">Score</span>
+                        <span class="current-score">0</span>
+                    </div>
+                    <div class="total">
+                        <span class="total-name">Total</span>
+                        <span class="total-score">0</span>
+                    </div>
+                </div>
+                <div class="player">
+                    <h2 class="player-name">Player 2</h2>
+                    <div class="current">
+                        <span class="current-name">Score</span>
+                        <span class="current-score">0</span>
+                    </div>
+                    <div class="total">
+                        <span class="total-name">Total</span>
+                        <span class="total-score">0</span>
+                    </div>
+                </div>
+                <div class="player">
+                    <h2 class="player-name">Player 3</h2>
+                    <div class="current">
+                        <span class="current-name">Score</span>
+                        <span class="current-score">0</span>
+                    </div>
+                    <div class="total">
+                        <span class="total-name">Total</span>
+                        <span class="total-score">0</span>
+                    </div>
+                </div>
+                <div class="player">
+                    <h2 class="player-name">Player 4</h2>
+                    <div class="current">
+                        <span class="current-name">Score</span>
+                        <span class="current-score">0</span>
+                    </div>
+                    <div class="total">
+                        <span class="total-name">Total</span>
+                        <span class="total-score">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dices-btns">
+                <div class="image">
+                    <img class="dice-img" src="img/5.png" alt="image">
+                </div>
+                <button class="btn-game btn">New Game</button>
+                <button class="btn-roll btn">Roll Dice</button>
+                <button class="btn-save btn">Save</button>
+            </div>
+        </div>
+        <div class="modal">
+            <span class="modal-close">&times;</span>
+            <p class="winner"></p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

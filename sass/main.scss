@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dices {
+    &-body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 3em;
+        padding: 3em 1em;
+        width: 100%;
+        min-height: 100vh;
+        text-align: center;
+        background: linear-gradient(to right top, #007ad9, #0097ea, #00b2f4, #00cdfb, #50e6ff);
+        z-index: 0;
+
+        .modal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 2em 1em;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right top, #007ad9, #0097ea, #00b2f4, #00cdfb, #50e6ff);
+            opacity: .9;
+            z-index: 5;
+
+            &-close {
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                font-size: 5rem;
+                cursor: pointer;
+                z-index: 10;
+            }
+        }
+
+        .show-modal {
+            display: flex;
+        }
+
+        .winner {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+    }
+
+    &-title {
+        font-size: 4rem;
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1em;
+        padding: 1em 0;
+        width: 100%;
+
+        .players {
+            display: flex;
+            column-gap: 2em;
+
+            .player {
+                padding: 3em 6em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 3em;
+                background: #F5F9FF;
+                border-radius: 4px;
+
+                &-name {
+                    font-size: 3rem;
+                }
+
+                .current {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: .6em;
+
+                    &-name {
+                        font-size: 2rem;
+                    }
+
+                    &-score {
+                        font-size: 4rem;
+                    }
+                }
+
+                .total {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: .6em;
+
+                    &-name {
+                        font-size: 2rem;
+                    }
+
+                    &-score {
+                        font-size: 4rem;
+                    }
+                }
+            }
+
+            .active {
+                .player-name {
+                    color: #CF476E;
+                }
+            }
+        }
+    }
+
+    &-btns {
+        padding: 1em 0;
+        display: flex;
+        align-items: center;
+        column-gap: 3em;
+
+        .btn {
+            padding: 1em 2em;
+            color: #fff;
+            font-size: 1.6rem;
+            background: #CF476E;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .image {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border: 2px solid #CF476E;
+            border-radius: 4px;
+            overflow: hidden;
+
+            .dice-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

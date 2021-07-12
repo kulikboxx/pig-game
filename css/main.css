@@ -1,0 +1,219 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dices-body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 3em;
+  padding: 3em 1em;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  background: -webkit-gradient(linear, left bottom, right top, from(#007ad9), color-stop(#0097ea), color-stop(#00b2f4), color-stop(#00cdfb), to(#50e6ff));
+  background: linear-gradient(to right top, #007ad9, #0097ea, #00b2f4, #00cdfb, #50e6ff);
+  z-index: 0;
+}
+
+.dices-body .modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2em 1em;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left bottom, right top, from(#007ad9), color-stop(#0097ea), color-stop(#00b2f4), color-stop(#00cdfb), to(#50e6ff));
+  background: linear-gradient(to right top, #007ad9, #0097ea, #00b2f4, #00cdfb, #50e6ff);
+  opacity: .9;
+  z-index: 5;
+}
+
+.dices-body .modal-close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.dices-body .show-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dices-body .winner {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.dices-title {
+  font-size: 4rem;
+}
+
+.dices-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 1em;
+  padding: 1em 0;
+  width: 100%;
+}
+
+.dices-wrapper .players {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
+}
+
+.dices-wrapper .players .player {
+  padding: 3em 6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 3em;
+  background: #F5F9FF;
+  border-radius: 4px;
+}
+
+.dices-wrapper .players .player-name {
+  font-size: 3rem;
+}
+
+.dices-wrapper .players .player .current {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: .6em;
+}
+
+.dices-wrapper .players .player .current-name {
+  font-size: 2rem;
+}
+
+.dices-wrapper .players .player .current-score {
+  font-size: 4rem;
+}
+
+.dices-wrapper .players .player .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: .6em;
+}
+
+.dices-wrapper .players .player .total-name {
+  font-size: 2rem;
+}
+
+.dices-wrapper .players .player .total-score {
+  font-size: 4rem;
+}
+
+.dices-wrapper .players .active .player-name {
+  color: #CF476E;
+}
+
+.dices-btns {
+  padding: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 3em;
+          column-gap: 3em;
+}
+
+.dices-btns .btn {
+  padding: 1em 2em;
+  color: #fff;
+  font-size: 1.6rem;
+  background: #CF476E;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.dices-btns .image {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #CF476E;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dices-btns .image .dice-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=main.css.map */
